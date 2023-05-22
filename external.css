@@ -1,0 +1,171 @@
+
+.title-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: rgb(112, 54, 9);
+  font-weight: bold;
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+h3{
+  color: rgb(112, 54, 9);
+  padding-left: 50px;
+}
+a{
+  color:rgb(82, 79, 77);
+  text-decoration: underline;
+}
+
+ul{
+  list-style-type: square;
+  
+}
+
+a:hover {color: rgb(89, 137, 186)}
+
+a.nav-link {
+  text-decoration: none;
+}
+
+a.navbar-brand {
+  text-decoration: none;
+}
+
+a.mebutton{
+  text-decoration: none;
+}
+
+a.dropdown-item{
+  text-decoration: none;
+}
+
+img.title-pic{
+  margin-top: 0px;
+}
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#accordion .card-header .collapsible-title {
+  color: rgb(77, 80, 82);
+  font-weight: bold;
+}
+
+h3{
+  margin: 20px;
+}
+
+.btn-primary{
+  margin-top: 32;
+}
+select{
+    font-size: 16px;
+  }
+
+body{
+  background-color: #EDEDED;
+}
+
+
+.content {
+  margin-top: 80px; 
+}
+
+.tooltip-custom .tooltip-inner{
+  background-color: #515151; 
+  border: none;
+}
+
+
+.vorlagentyp-color {
+    border: 1px dotted rgb(72, 69, 69); 
+    padding: 2px; 
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.italic{
+  font-size: small;
+  font-style: italic;
+}
+
+
+#legende {
+  padding-top: 100px;
+  padding-left: 900;
+}
+
+.legende {
+  margin: -20px;
+  padding-top: 15px;
+  padding-left: 940;
+  content: none;
+  padding-bottom: 10;
+}
+
+.bubble:hover {
+  fill-opacity: 1;
+}
+
+#noVoteBox {
+  margin-top: 20;
+  display: none;
+ 
+}
+
+#select-x-var {
+  display: none;
+}
+
+#chartId {
+  position: relative;
+  left: -38px;
+}
+
+#plotSVG {
+  width: 100%;
+  height: 100%;
+}
+
+#xAxis{
+  font-size: 16px;
+}
+
+#yAxis{
+  font-size: 16px;
+}
+
+#infobox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.bootstrap-iso {
+  position: relative;
+  display: inline-block;
+}
+
+
+.bootstrap-iso form {
+  display: inline-block;
+  margin: 0;
+  padding-top: 20;
+  position: relative;
+}
+
+.bootstrap-iso form input[type="text"] {
+  width: 100%;
+}

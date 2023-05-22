@@ -1,0 +1,257 @@
+<html>
+    <head>
+        <!-- Bootstrap -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+        <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        
+        <!-- Bootstrap Date-Picker Plugin -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <link rel="stylesheet" type="text/css" href="external.css"/>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+
+         <!-- My JavaScript-->
+         <script type="text/javascript" src="Scatterplot.js"></script>
+        <title>Chart</title>  
+    </head>
+    
+    <body>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-nav">
+        <a class="navbar-brand">baselvotes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="ChartPage.html">
+              <img width="30" height="30" src="https://img.icons8.com/dotty/80/graph.png" alt="graph"/> Chart <span class="sr-only">(current)</span>
+            </a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img width="30" height="30" src="https://img.icons8.com/737373/dotty/80/user-manual.png" alt="user-manual"/> Erklärungen
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Index.html">Abstimmungstypen</a>
+                <a class="dropdown-item" href="Index.html#explanation">Erklärungen zu den Daten</a>
+                <a class="dropdown-item" href="Index.html#quellen">Quellen Daten</a>
+                <a class="dropdown-item" href="Index.html#codes">Quellen Codes & Bilder</a>
+              </div>
+            </li>
+            <a class="nav-item nav-link" href="AboutMe.html">
+              <img width="30" height="30" src="https://img.icons8.com/737373/dotty/80/about-us-female.png" alt="about-us-female"/> About Me
+            </a>
+          </div>
+        </div>
+      </nav>
+
+
+      <img class="title-pic" width="100%" src="Images/AdobeStock_385320928(1)-ai.svg">
+
+      <!-- Textbox -->
+        <h1 class="title-center">Abstimmungsdaten Basel-Stadt</h1>
+        <div class="container-fluid col-11">
+          <div class="card" id="infos">
+            <div class="card-body">
+              <p class="card-text">
+                Diese Applikation gibt einen Überblick über die Abstimmungen im Kanton Basel-Stadt zwischen 1875 und 2023. Hier können Sie Zusammenhänge zwischen Stimmbeteiligung, Abstimmungstyp und Thema finden, sowie mit einem Klick weitere spannende Details zu den Abstimmungen erfahren. Finden Sie beispielsweise heraus, wie viele Stimmen den Unterschied gemacht haben.
+                <br>Mehr Informationen sind unter <a href="http://www.baselvotes.ch" target="_blank">baselvotes.ch</a> zu finden. <br>
+                <br> Diese Visualisierung ist im Rahmen der Veranstaltung “Open Data” an der Universität Bern entstanden.
+              </p>
+            </div>
+          </div>
+        </div>
+          
+      
+      <!-- Main Part -->
+      <div class="bootstrap-iso">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4"> <!-- Date input 1 -->
+              <div class="form-group">
+                <label class="control-label" for="date">Start Date</label>
+                <input type="text" class="form-control" name="startDateN" id="startDate" placeholder="From" autocomplete="off"/>
+              </div>
+            </div>
+            <div class="col-md-4"> <!-- Date input 2 -->
+              <div class="form-group">
+                <label class="control-label" for="date">End Date</label>
+                <input type="text" class="form-control" name="endDateN" id="endDate" placeholder="To" autocomplete="off"/>
+              </div>
+            </div>
+            <div class="col-md-4"> <!-- Submit button -->
+              <div class="form-group">
+                <button class="btn btn-primary" name="submit" type="submit" onclick="resetSelect()">Submit</button>
+              </div>
+            </div>
+          </div>
+            
+            <div class="row">
+            <div class="col-7"> <!-- Here comes the graph and the xAxis chooser -->
+              <div id="plot-wrapper" style="position: relative; overflow: visible; margin: 10px;">
+                <svg id="plotSVG" width="100%" height=400px></svg>
+                <select id="select-x-var" style="position: absolute; bottom:0px; left: 670px;">
+                  <option value="jastimmen" selected>% Ja-Stimmen</option>
+                  <option value="thema">Thema</option>
+                </select>
+              </div>
+            </div>
+
+            <script>
+             function resetSelect() {
+              // Reset the select element to the default value
+              document.getElementById("select-x-var").value = "jastimmen";
+            }
+            </script>
+
+<div class="col-4"> <!-- This is the noVote infoBox -->
+  <div class="card noVote" id="noVoteBox">
+    <div class="row">
+      <div class="col-12">
+        <!-- Centered column -->
+        <div class="card-body text-center mb-0">
+          <h6 class="card-title mb-1"><span id="chosen-years" class="bold"></span></h6>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 mt-0">
+        <!-- Left column -->
+        <div class="card-body">
+          <p id='date-info' class="card-text"></p>
+        </div>
+      </div>
+      <div class="col-6 mt-0">
+        <!-- Right column -->
+        <div class="card-body">
+          <p id="historic-info" class="card-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Datapicker -->
+      <script>
+          $(document).ready(function(){
+              var date_input=$('input[name="startDateN"]'); //our date input has the name "startDateN"
+              var date_input1=$('input[name="endDateN"]'); //our date input has the name "endDateN"
+              var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+              var from={
+                  format: "yyyy",
+                  viewMode: "years", 
+                  minViewMode: "years",
+                  autoclose:true,
+                  showTooltip: false,
+                  startView: 2,
+                  defaultViewDate: {
+                      year: '2000'
+                  },
+                  startDate: '-148y', //2023-1875
+                  endDate: '+0y', //2023
+                  todayBtn: false  
+              };
+  
+              var to={
+              format: "yyyy",
+              viewMode: "years", 
+              minViewMode: "years",
+              autoclose:true,
+              startView: 2,
+              defaultViewDate: {
+                  year: '2000'
+              },
+              startDate: date_input.val(), // Set the start date of "to" datepicker to the selected year from "from" datepicker
+              endDate: '+0y' //2023
+              };
+  
+              date_input.datepicker(from).on('changeDate', function(selected){
+                  // Update the start date of the "to" datepicker when a new year is selected in the "from" datepicker
+                  to.startDate = new Date(selected.date.getFullYear(), 0, 1);
+                  date_input1.datepicker('setStartDate', to.startDate); // Update the "to" datepicker with the new start date
+              });
+              date_input1.datepicker(to);
+          })
+  
+          // Get the submit button element
+          const submitBtn = document.querySelector('button[type="submit"]');
+  
+          // Add an event listener to the submit button
+          submitBtn.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent the default form submission
+  
+          // Get the values of the datepickers
+          const startDate = document.querySelector('input[name="startDateN"]').value;
+          const endDate = document.querySelector('input[name="endDateN"]').value;
+  
+          // Do something with the startDate and endDate variables
+          testing(startDate, endDate);
+          });
+      </script>
+      </div>
+  
+      <!-- This is the infobox on click -->
+        <div id="infobox" class="modal fade">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h6 class="modal-title">Weiterführende Infos</h6>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div id='text-side' class="col-md-7"> <!-- The left side of the infbox-->
+                        <p>Just text so it can input the js text correctly</p>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="card">
+                        <div class="card-body">
+                          <p id='info-side' class="card-text"></p> <!-- The right side of the box -->
+                          <div class="row">
+                            <div class="col-md-6"> <!-- This is the Abstimmungsergebnis chart -->
+                              <canvas id="chartId" aria-label="chart" height="125" width="207"></canvas> 
+                            </div>
+                            <div id="radial-Chart" class="col-md-6"> <!-- This is the Stimmbeteiligung chart -->
+                              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h6 id="legende">Legende</h6>
+          <ul class="legende">
+            <li>Fakultatives Referendum: <span class="bold" style="background-color: #ff5982; display: inline-block; width: 10px; height: 10px;"></span></li>
+            <li>Gegenentwurf des Grossen Rates: <span class="bold" style="background-color: #8d42b9; display: inline-block; width: 10px; height: 10px;"></span></li>
+            <li>Initiative: <span class="bold" style="background-color: #8ac926; display: inline-block; width: 10px; height: 10px;"></span></li>
+            <li>Angeordnete Abstimmung: <span class="bold" style="background-color: #1982c4; display: inline-block; width: 10px; height: 10px;"></span></li>
+            <li>Obligatorische Abstimmung: <span sclass="bold" tyle="background-color: #683a1d; display: inline-block; width: 10px; height: 10px;"></span></li>
+          </ul>
+        
+  <!-- My JavaScript-->
+   <script type="text/javascript" src="Stimmbeteiligung.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,243 @@
+<html>
+   <head>
+        <!-- Bootstrap -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        
+
+        <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        
+        <!-- Bootstrap Date-Picker Plugin -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <link rel="stylesheet" type="text/css" href="external.css"/>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+
+     
+
+       <title>Erklärungen</title>
+   </head>
+
+   <body id="main">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-nav">
+        <a class="navbar-brand">baselvotes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link " href="ChartPage.html">
+              <img width="30" height="30" src="https://img.icons8.com/737373/dotty/80/graph.png" alt="graph"/> Chart 
+            </a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img width="30" height="30" src="https://img.icons8.com/dotty/80/user-manual.png" alt="user-manual"/> Erklärungen <span class="sr-only">(current)</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Index.html">Abstimmungstypen</a>
+                <a class="dropdown-item" href="Index.html#explanation">Erklärungen zu den Daten</a>
+                <a class="dropdown-item" href="Index.html#quellen">Quellen Daten</a>
+                <a class="dropdown-item" href="Index.html#codes">Quellen Codes & Bilder</a>
+              </div>
+            </li>
+            <a class="nav-item nav-link" href="AboutMe.html">
+              <img width="30" height="30" src="https://img.icons8.com/737373/dotty/80/about-us-female.png" alt="about-us-female"/> About Me
+            </a>
+          </div>
+        </div>
+      </nav>
+
+
+       <div class="content">
+       <!--Erklärungen zu Abstimmungstypen-->
+       <h3>Abstimmungstypen</h3>
+       <div class="container-fluid col-11">
+           <div class="row">
+               <div class="col-12">
+                  <div id="accordion">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed collapsible-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Fakultatives Referendum
+                          </button>
+                        </h5>
+                      </div>
+               
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body">
+                              Wenn innerhalb von 42 Tagen ab Publikation des Beschlusses im Kantonsblatt genügend Unterschriften gesammelt werden, muss über das Gesetz oder die Gesetzesänderung abgestimmt werden. Auch über Ausgaben von über 1,5 Millionen Franken (sowie der Erwerb von und die Verfügung über Liegenschaften im Verwaltungsvermögen, wenn sie den Wert von 4,5 Millionen Franken übersteigen) kann abgestimmt werden.
+                              <br>
+                              <br> Bis 1974 waren für ein Referendum 1'000 Unterschriften erforderlich, seit 1975 2'000 Unterschriften.
+                              <br>
+                              <br>Angenommen = Bestätigung des Grossratsbeschlusses (Erfolg des Parlaments)
+                              <br>Abgelehnt = Ablehnung des Grossratsbeschlusses (Erfolg des Referendumskomitees)
+                              <br>
+                              <br>Quellen: <a href="https://www.staatskanzlei.bs.ch/politische-rechte/referenden.html" target="_blank"> Infos zu Referenden Basel-Stadt </a>
+                              und <a href="https://baselvotes.ch/" target="_blank">Baselvotes.ch</a>
+                          </div>
+                      </div>
+                    </div>
+                  
+            
+                  
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed  collapsible-title" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Gegenentwurf des grossen Rates
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body">
+                              Der grosse Rat schlägt als Antwort auf die Initiative einen anderen Verfassungsartikel vor. Zieht das Initiativkomitee die Initiative nicht zurück, so gelangt der Gegenentwurf gleichzeitig mit der Initiative zur Abstimmung.
+                              <br>
+                              <br>Quelle: <a href="https://www.ch.ch/de/abstimmungen-und-wahlen/initiativen/direkter-gegenentwurf-indirekter-gegenvorschlag/#direkter-gegenentwurf" target="_blank"> ch.ch </a>
+                          </div>
+                      </div>
+                   </div>
+                  
+
+                  
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed  collapsible-title" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Initiative
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Stimmberechtigte können eine Initiative mit dem Begehren auf Erlass, Änderung oder Aufhebung von Verfassungs- und Gesetzesbestimmungen oder eines Grossratsbeschlusses einreichen.
+                            <br> Bis Juni 1939 waren für eine Initiative 1'000 Unterschriften erforderlich, danach 2'000, ab 1975 4'000 und seit 2006 3'000 Unterschriften.
+                            <br> Bis 1911 kam nicht die Volksinitiative, sondern der Grossratsbeschluss zur Volksinitiative an die Urne. Lautete die Empfehlung des Grossen Rates Nein, bedeutete eine Nein-Mehrheit Annahme der Initiative.
+                            <br>
+                            <br>Quellen: <a href="https://www.staatskanzlei.bs.ch/politische-rechte/initiativen.html" target="_blank">Infos zu Initiativen Basel-Stadt</a>
+                            und <a href="https://baselvotes.ch/" target="_blank">Baselvotes.ch</a>
+                        </div>
+                      </div>
+                    </div>
+                  
+
+                  
+                    <div class="card">
+                      <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed  collapsible-title" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Angeordnete Abstimmung
+                          </button>
+                        </h5>
+                      </div>
+
+                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div> 
+                    </div>
+                  
+
+                  
+                   <div class="card">
+                      <div class="card-header" id="headingFive">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed  collapsible-title" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Obligatorische Abstimmung
+                            </button>
+                          </h5>
+                       </div>
+                       
+                       <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                          <div class="card-body">
+                            Beschlüsse, welche zwingend eine Volksabstimmung erfordern. Unter anderem Staatsverträge mit verfassungsänderndem Inhalt und Änderungen des Kantonsgebiets. Der Grosse Rat kann den Stimmberechtigten freiwillig weitere Vorlagen zur Abstimmung vorlegen.
+                            <br>
+                            <br>Quelle: <a href="https://grosserrat.bs.ch/parlament/volksrechte" target="_blank"> Volksrechte Basel-Stadt</a>
+                          </div>
+                        </div> 
+                    </div>
+                  
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Erklärungen Date -->
+      <h3 id="explanation">Erklärungen zu den Daten</h3>
+       <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="card" id="infos">
+              <div class="card-body">
+                <p class="card-text">
+                  Dieser Datensatz zeigt die Resultate der Volksabstimmungen im Kanton Basel-Stadt seit 1875. Die Daten vor 1921 wurden von <a href="https://baselvotes.ch" target="_blank">baselvotes.ch</a> zur Verfügung gestellt. Seit 1921 basieren die Daten auf den Statistischen Jahrbüchern. Für jede Abstimmungsvorlage sind alle amtlich publizierten Kennzahlen zum Schlussresultat ausgewiesen.
+                  <br>
+                  <br>Zusätzlich sind alle Vorlagen inhaltlich dem hauptsächlich betroffenen Politikbereich zugeordnet. Die Zuteilung erfolgt auf Basis der Einteilung des Bundesamtes für Statistik, die im eidgenössischen Abstimmungsdatensatz der Datenplattform <a href="https://swissvotes.ch/votes" target="_blank">swissvotes</a> des Instituts für Politikwissenschaft der Universität Bern verwendet wird.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+
+       <h3 id="quellen">Quellen Daten</h3>
+       <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="card" id="infos">
+              <div class="card-body">
+                <p class="card-text">
+                  <span class="italic">Kopie aus <a href="https://baselvotes.ch/volksabstimmungen/" target="_blank">baselvotes.ch</a> </span>
+                  <br> 
+                  <br>Die Titel der Abstimmungen und die statistischen Daten basieren von 1875 bis 1920 auf den Kantonsblättern Basel-Stadt des Staatsarchivs, ab 1921 auf den seither erscheinenden <a href="https://www.statistik.bs.ch/zahlen/statistisches-jahrbuch/pdf-archiv.html" target="_blank">Jahrbüchern des Statistischen Amts Basel-Stadt</a>. In wenigen Fällen hat die Autorin bezüglich Rechtsform (Volksinitiative, Gegenvorschlag, fakultatives oder obligatorisches Referendum) Korrekturen vorgenommen. Zudem wird im Gegensatz zum Statistischen Jahrbuch auf eine Unterscheidung obligatorischer Referenden in „obligatorisch“ und „angeordnet“ verzichtet, da die Klassifizierungen über die Zeit nicht einheitlich gehandhabt wurden.
+                  <br>Die nichtstatistischen Daten (Urheberschaft, Parolenspiegel und inhaltlicher Kurzbeschrieb) basieren auf einer Fülle von Zeitungsartikeln, Literatur, Regierungsberichten, den Grossratsprotokollen, den <a href="https://www.staatskanzlei.bs.ch/politische-rechte/wahlen-abstimmungen/resultate-archiv.html">Abstimmungserläuterungen des Kantons</a> und der <a href="https://www.baslerstadtbuch.ch/home.html;jsessionid=5D2851EA5BDE5C089D25CDFCEC758BAD" target="_blank">Basler Chronik des Basler Stadtbuchs</a>. Ergänzungen erlaubten ab 2007 zudem der <a href="https://www.onlinereports.ch/fruehere-Parolen.1362.0.html" target="_blank">Parolenspiegel von onlinereports</a>. Die nichtstatistischen Daten beanspruchen keine Vollständigkeit.
+                  </p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>   
+      
+      <h3 id="codes">Quellen Code-Snippets & Bilder</h3>
+       <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-11">
+         <div class="card" style="margin-bottom: 20"id="infos">
+           <div class="card-body">
+            <p class="card-text">
+              Die Website wurde mithilfe von Bootstrap und D3.js, sowie jQuery erstellt.
+              <br> 
+              <br> Der Haupt-Chart wurde auf Basis von folgender Anleitung erstellt: <a href="https://medium.com/codex/an-interactive-scatter-plot-e5a01064b17" target="_blank">An Interactive Scatter Plot</a>   
+              <br> Der Pie-Chart in der Infobox wurde auf Basis folgenden Snippets erstellt: <a href="https://www.chartjs.org/docs/latest/samples/other-charts/pie.html" target="_blank">Charts.js</a>
+              <br> Der Radial-Chart in der Infobox wurde auf Basis folgenden Snippets erstellt: <a href="https://apexcharts.com/javascript-chart-demos/radialbar-charts/basic/" target="_blank">Apexcharts</a>
+              <br>
+              <br> Das Titel Bild wurde von <a href="https://stock.adobe.com/ch_de/?gclid=CjwKCAjwpayjBhAnEiwA-7ena3LsYtC-T4Q8tIftZGzr5o4nVX0oyXoOD2hzsGnCwUmsxkGz1nq18xoCcrYQAvD_BwE&ef_id=CjwKCAjwpayjBhAnEiwA-7ena3LsYtC-T4Q8tIftZGzr5o4nVX0oyXoOD2hzsGnCwUmsxkGz1nq18xoCcrYQAvD_BwE:G:s&s_kwcid=AL!3085!3!513289206861!e!!g!!adobe%20stock!766298520!43180054747&as_channel=sem&as_campclass=brand&as_campaign=CH|CPRO|Stock|PURCH|As_Brand_Exact|GG||&as_source=google&mv=search&as_camptype=acquisition&sdid=X2PHHZSJ&as_audience=core&gad=1" target="_blank">AdobeStock</a> heruntergeladen. Hierfür war ein kostenpflichtiges Abo nötig.
+              <br> Die Icons sind allesamt von <a href="https://icons8.com/" target="_blank">icons8</a> zur Verfügung gestellt worden. Nachfolgend die einzelnen Links:
+                <ul>
+                  <li> <a  href="https://icons8.com/icon/101799/chart">Chart</a> icon by <a href="https://icons8.com">Icons8</a></li>
+                  <li> <a  href="https://icons8.com/icon/45454/user-manual">User Manual</a> icon by <a href="https://icons8.com">Icons8</a> </li>
+                  <li> <a  href="https://icons8.com/icon/45139/über-uns-weiblich">Über uns Weiblich</a> icon by <a href="https://icons8.com">Icons8</a></li>
+                  <li> <a  href="https://icons8.com/icon/47738/no">No</a> icon by <a href="https://icons8.com">Icons8</a></li>
+                  <li> <a  href="https://icons8.com/icon/ExjPRAX81HOH/tank">Tank</a> icon by <a href="https://icons8.com">Icons8</a></li>
+                  <li> <a  href="https://icons8.com/icon/49624/parliament">Parliament</a> icon by <a href="https://icons8.com">Icons8</a></li>
+                  <li> <a  href="https://icons8.com/icon/104418/strike">Strike</a> icon by <a href="https://icons8.com">Icons8</a></li>
+                  <li> <a  href="https://icons8.com/icon/49580/elections">Elections</a> icon by <a href="https://icons8.com">Icons8</a></li>
+                  <li> <a  href="https://icons8.com/icon/48536/money-box">Money Box</a> icon by <a href="https://icons8.com">Icons8</a></li>
+                </ul>
+            </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+   </body>
+</html>

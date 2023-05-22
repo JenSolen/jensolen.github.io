@@ -1,0 +1,77 @@
+[
+    {
+      "year": "1891",
+      "event": "Einführung der Volksinitiative",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/elections.png' alt='elections'/>"
+    },
+    {
+      "year": "1914-1918",
+      "event": "Erster Weltkrieg",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/tank.png' alt='tank'/>"
+    },
+    {
+      "year": "1918",
+      "event": "Landesstreik",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px'src='https://img.icons8.com/wired/100/strike.png' alt='strike'/>"
+    },
+    {
+      "year": "1920",
+      "event": "Genfer Konvention",
+      "icon": "<img width='25' height='25' style='margin-bottom: 10px' src='https://img.icons8.com/wired/100/parliament.png' alt='parliament'/>"
+    },
+    {
+      "year": "1929-1936",
+      "event": "Weltwirtschaftskrise",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/money-box--v1.png' alt='money-box--v1'/>"
+    },
+    {
+      "year": "1938",
+      "event": "Bundesfinanzreform",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/money-box--v1.png' alt='money-box--v1'/>"
+    },
+    {
+      "year": "1939",
+      "event": "Generalmobilmachung",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/tank.png' alt='tank'/>"
+    },
+    {
+      "year": "1939-1945",
+      "event": "Zweiter Weltkrieg",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/tank.png' alt='tank'/>"
+    },
+    {
+      "year": "1947-1991",
+      "event": "Kalter Krieg",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/tank.png' alt='tank'/>"
+    },
+    {
+      "year": "1948",
+      "event": "Einführung der AHV",
+      "icon": "<img width='25' height='25' style='margin-bottom: 10px' src='https://img.icons8.com/wired/100/parliament.png' alt='parliament'/>"
+    },
+    {
+      "year": "1954",
+      "event": "Konsultativabstimmung Frauenstimmrecht",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/elections.png' alt='elections'/>"
+    },
+    {
+      "year": "1966",
+      "event": "Frauenstimmrecht Basel-Stadt",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/elections.png' alt='elections'/>"
+    },
+    {
+      "year": "1971",
+      "event": "Frauenstimmrecht CH",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/elections.png' alt='elections'/>"
+    },
+    {
+      "year": "2002",
+      "event": "UNO Beitritt",
+      "icon": "<img width='25' height='25' style='margin-bottom: 10px' src='https://img.icons8.com/wired/100/parliament.png' alt='parliament'/>"
+    },
+    {
+      "year": "2022",
+      "event": "Ukrainekrieg Beginn",
+      "icon": "<img width='25' height='25' style='margin-bottom:10px' src='https://img.icons8.com/wired/100/tank.png' alt='tank'/>"
+    }
+  ]
